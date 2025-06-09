@@ -1,18 +1,24 @@
+import Footer from './footer.jsx';
+
 export default function AboutUs() {
     return(
         <>
-        <div className="ab">
-<h1>ExploreYatra is a dynamic and user-friendly travel planning web application focused on helping A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.
+        <div className="aboutmain">
+<h1>Exploreयात्रा – Your Ultimate Travel & Trek Planner for Nepal 🇳🇵</h1>
 
-Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.
+<div className="secmain">
+    At exploreयात्रा, we believe that every journey in Nepal should be more than just a destination—it should be an experience.
 
-TOPIC SENTENCES
-A well-organized paragraph supports or develops a single controlling idea, which is expressed in a sentence called the topic sentence. A topic sentence has several important functions: it substantiates or supports an essay’s thesis statement; it unifies the content of a paragraph and directs the order of the sentences; and it advises the reader of the subject to be discussed and how the paragraph will discuss it. Readers generally look to the first few sentences in a paragraph to determine the subject and perspective of the paragraph. That’s why it’s often best to put the topic sentence at the very beginning of the paragraph. In some cases, however, it’s more effective to place another sentence before the topic sentence—for example, a sentence linking the current paragraph to the previous one, or one providing background information.
+Founded with a deep love for our homeland, we set out to create a travel planner that truly understands the heart of Nepal—from the soaring peaks of the Himalayas to the peaceful villages hidden in its valleys. Whether you're an adventure seeker or a peaceful wanderer, we’re here to guide you through the rich landscapes, diverse cultures, and untold stories that make Nepal unforgettable.
 
-Although most paragraphs should have a topic sentence, there are a few situations when a paragraph might not need a topic sentence. For example, you might be able to omit a topic sentence in a paragraph that narrates a series of events, if a paragraph continues developing an idea that you introduced (with a topic sentence) in the previous paragraph, or if all the sentences and details in a paragraph clearly refer—perhaps indirectly—to a main point. The vast majority of your paragraphs, however, should have a topic sentence.
+Our mission is simple:
+To simplify your travel and trek planning, while making it more local, authentic, and accessible. With the help of curated routes, practical tools, and real-time information, exploreयात्रा is designed to support both first-time travelers and seasoned explorers.
 
-PARAGRAPH STRUCTURE users explore the beauty of Nepal with ease and confidence. The platform empowers travelers to customize and book trips, discover destinations, and manage all travel essentials in one place.</h1>
+Thank you for trusting us with your journey.
+Let’s explore Nepal—one यात्रा at a time.
 </div>
+</div>
+<Footer />
         </>
     )
 }

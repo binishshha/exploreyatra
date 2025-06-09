@@ -3,8 +3,8 @@ import NavBar  from "./components/navbar";
 import Home  from "./components/home";
 import AboutUs from "./components/aboutus";
 import Dest from "./components/destinations";
-import Trek from "./components/trek";
-import Tour from "./components/tour";
+import Trek from "./components/trekk/trek";
+import Tour from "./components/tourr/tour";
 import Contact from "./components/contactus";
 
 function App() {

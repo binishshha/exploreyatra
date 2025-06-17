@@ -1,0 +1,81 @@
+.contact {
+  justify-self: center;
+  margin: 20px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 30px;
+}
+
+.contact-info div {
+  border: 1px solid black;
+  width: 100%;
+  padding: 20px;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+/* contactus.css */
+
+
+form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(12, 12, 12, 0.1);
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.frow,
+.srow {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-main input{
+   width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.message input[type="text"]{
+padding: 20px;
+}
+
+.butonn{
+  display: flex;
+  justify-content: space-around;
+}
+
+.butonn button{
+border: none;
+background-color: rgb(41, 41, 221);
+padding: 10px 15px;
+font-size: 1rem;
+border-radius: 8px;
+color: white;
+font-weight: bold;
+}
+
+.butonn button:hover {
+  background-color: #0056b3;
+}
+
+

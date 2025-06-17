@@ -1,17 +1,12 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import './contactus.css'
+import { initialInputs,getlocalStorageItems,setinputs } from "./inputs.js";
 
 export default function Form() {
-  const initialInputs = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phonenumber: "",
-    startDate: "",
-    endDate: "",
-    travellernum: "",
-    ageIdentity: "[]",
-    message: "",
-  };
+
+useEffect(() => {
+ return const setinputs = localStorage.setItem(stateinputs, JSON.stringify(formState));
+  }, [formState]);
 
   const [formState, setFormState] = useState(initialInputs);
 
@@ -52,43 +47,13 @@ export default function Form() {
       <h1 style={{ justifySelf: "center", textAlign: "center" }}>
         TO CONTACT IMMEDIATELY
       </h1>
-      <div
-        className="inquire"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifySelf: "center",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "30px",
-          backgroundColor: "#c7c4c4",
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-          borderRadius: "10px",
-          maxWidth: "600px",
-          height: "100%",
-        }}
-      >
-        <p
-          style={{
-            margin: "10px",
-          }}
-        >
-          Fill the contact form below for further info:
-        </p>
+      
         <form
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            borderRadius: "20px",
-            backgroundColor: "#e3f2fd",
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-            width: "80%",
-          }}
           onSubmit={handleSubmit}
         >
-          <div className="form">
+          <div className="form-main">
             <div>
-              <label>Enter your First name:</label>
+              <label>First name:</label>
               <input
                 type="text"
                 id="firstName"
@@ -99,7 +64,7 @@ export default function Form() {
             </div>
 
             <div>
-              <label>Enter your Last name:</label>
+              <label>Last name:</label>
               <input
                 type="text"
                 id="lastName"
@@ -110,7 +75,7 @@ export default function Form() {
             </div>
 
             <div>
-              <label>Enter your Email:</label>
+              <label>Email-address:</label>
               <input
                 type="email"
                 id="email"
@@ -121,7 +86,7 @@ export default function Form() {
             </div>
 
             <div>
-              <label>Enter your Phone Number:</label>
+              <label>Phone Number:</label>
               <input
                 type="number"
                 id="phonenumber"
@@ -132,7 +97,7 @@ export default function Form() {
             </div>
 
             <div>
-              <label>Enter your Starting Date:</label>
+              <label>Starting Date:</label>
               <input
                 type="date"
                 id="startDate"
@@ -213,7 +178,6 @@ export default function Form() {
             </div>
           </div>
         </form>
-      </div>
     </>
   );
 }

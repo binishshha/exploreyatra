@@ -1,7 +1,7 @@
 .hotel-card img {
     width: 100%;
   height: 100%;
-  max-height: 305px;
+  height: 300px;
 }
 
 .hotel-container{
@@ -17,6 +17,8 @@
   border: 1px solid black;
   padding: 10px;
   background-color: rgb(255, 241, 225);
+  width: 100%;
+  height: 500px;
 }
 
 .hotel-card .p{
@@ -25,7 +27,7 @@ font-size: larger;
 color: green;
 display: flex;
 justify-content: space-between;
-margin: 10px 0;
+margin: 15px 0;
 }
 
 .book-button{
@@ -34,6 +36,7 @@ margin: 10px 0;
     font-weight: bold;
     border: transparent;
     border-radius: 6px;
+    align-self: center;
 }
 
 .book-button:hover{

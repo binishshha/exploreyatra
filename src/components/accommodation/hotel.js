@@ -10,7 +10,7 @@ export const accommodationContent = [
     name: 'The Dwarika Hotel',
     image: dwarika,
     description: 'A heritage hotel known for luxury and Newari architecture.',
-    price: '$250/night',
+    price: '250',
     location: 'Battisputali, Kathmandu',
   },
   {
@@ -18,7 +18,7 @@ export const accommodationContent = [
     name: 'Hyatt Regency',
     image: hyatt,
     description: 'A five-star hotel offering elegance and premium amenities.',
-    price: '$220/night',
+    price: '220',
     location: 'Boudha, Kathmandu',
   },
   {
@@ -26,7 +26,7 @@ export const accommodationContent = [
     name: 'Lemon Tree',
     image: lemontree,
     description: 'Modern comfort with vibrant hospitality.',
-    price: '$120/night',
+    price: '120',
     location: 'Chhaya Center, Thamel, Kathmandu',
   },
   {
@@ -34,7 +34,7 @@ export const accommodationContent = [
     name: 'API Hotel',
     image: api,
     description: 'Simple and functional accommodation for travelers.',
-    price: '$60/night',
+    price: '60',
     location: 'Kalanki, Kathmandu',
   },
   {
@@ -42,7 +42,7 @@ export const accommodationContent = [
     name: 'Talabot Hotel',
     image: talabot,
     description: 'Stylish rooms with a warm, inviting atmosphere.',
-    price: '$90/night',
+    price: '90',
     location: 'Lalitpur, Kathmandu Valley',
   }
 ];

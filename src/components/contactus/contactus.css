@@ -40,6 +40,10 @@ form {
   justify-items: center;
 }
 
+.form-main label{
+  color: black;
+}
+
 .frow,
 .srow {
   display: flex;

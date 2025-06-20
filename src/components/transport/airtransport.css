@@ -1,0 +1,29 @@
+.mainsec{
+      display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid transparent;
+    flex-wrap: wrap;
+    background-color: rgb(53, 49, 49);
+    box-shadow: black;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+div input ,
+div select{
+    padding: 0.5rem;
+}
+
+label{
+    color: white;
+}

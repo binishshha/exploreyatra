@@ -1,7 +1,8 @@
 import Accommodation from "./accommodation/hotels";
 import { useState } from "react";
 import { MdCardTravel } from "react-icons/md";
-
+import { FaRegPlusSquare, FaRegMinusSquare } from "react-icons/fa";
+import { CiSquareRemove } from "react-icons/ci";
 
 export default function Calculation() {
   const [cart, setCart] = useState([]);
@@ -12,16 +13,31 @@ export default function Calculation() {
   };
 
   const addToCart = (place) => {
-    console.log("Added:", place.name);
     const existing = cart.find((item) => item.id === place.id);
-    if (existing) {
-      const updated = cart.map((item) =>
-        item.id === place.id ? { ...item, qty: item.qty + 1 } : item
-      );
-      setCart(updated);
-    } else {
+    if (!existing) {
       setCart([...cart, { ...place, qty: 1 }]);
     }
+  };
+
+  const addQuantity = (id) => {
+    const updatedCart = cart.map((item) =>
+      item.id === id ? { ...item, qty: item.qty + 1 } : item
+    );
+    setCart(updatedCart);
+  };
+
+  const deductQuantity = (id) => {
+    const updatedCart = cart
+      .map((item) =>
+        item.id === id ? { ...item, qty: item.qty - 1 } : item
+      )
+      .filter((item) => item.qty > 0);
+    setCart(updatedCart);
+  };
+
+  const removeItem = (id) => {
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
   };
 
   const clearCart = () => {
@@ -42,7 +58,6 @@ export default function Calculation() {
           right: "20px",
         }}
       >
-
         <button
           onClick={handleCart}
           style={{
@@ -58,7 +73,7 @@ export default function Calculation() {
           <div
             className="cart"
             style={{
-          marginLeft:'auto',  
+              marginLeft: "auto",
               top: "20px",
               right: "20px",
               background: "white",
@@ -75,12 +90,31 @@ export default function Calculation() {
             ) : (
               <>
                 {cart.map((place) => (
-                  <div key={place.id}>
-                    <p>
-                      {place.name} — Rs. {place.price} × {place.qty} = Rs. {place.price * place.qty}
-
+                  <div
+                    key={place.id}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <p style={{ flexGrow: 1, margin: 0 }}>
+                      {place.name} — Rs. {place.price} × {place.qty} = Rs.{" "}
+                      {place.price * place.qty}
                     </p>
-
+                    <FaRegPlusSquare
+                      style={{ cursor: "pointer" }}
+                      onClick={() => addQuantity(place.id)}
+                    />
+                    <FaRegMinusSquare
+                      style={{ cursor: "pointer" }}
+                      onClick={() => deductQuantity(place.id)}
+                    />
+                    <CiSquareRemove
+                      style={{ cursor: "pointer" }}
+                      onClick={() => removeItem(place.id)}
+                    />
                   </div>
                 ))}
                 <hr />
@@ -106,7 +140,6 @@ export default function Calculation() {
       </div>
 
       <Accommodation addToCart={addToCart} />
-
     </>
   );
 }

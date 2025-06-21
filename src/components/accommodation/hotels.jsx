@@ -5,9 +5,10 @@ import { FaMapPin } from "react-icons/fa6";
 export default function Accommodation({ addToCart }) {
   return (
     <>
+    <div className="hotel-hero">
       <h2
         style={{
-          marginTop: "30px",
+          paddingTop: "15px",
           textAlign: "center",
         }}
       >
@@ -35,6 +36,7 @@ export default function Accommodation({ addToCart }) {
             </p>
           </div>
         ))}
+      </div>
       </div>
     </>
   );

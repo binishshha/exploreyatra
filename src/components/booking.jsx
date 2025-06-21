@@ -13,9 +13,9 @@ const Booking = () => {
         style={{
           margin: "0 auto",
           textAlign: "center",
-          maxWidth: "1500px",
+         width:'100%',
           padding:'20px',
-          backgroundColor:'gray',
+          backgroundColor:"rgb(92, 98, 105)",
           position:"sticky",
           zIndex:'99',
           top:'0'

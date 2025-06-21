@@ -1,37 +1,32 @@
-.homecontainer{
+.homecontainer {
   margin: 0 auto;
 }
 
-.choose {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
+.tour {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
   gap: 30px;
   max-width: 1500px;
-  padding: 50px;
-   margin: 0 auto;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.choose img {
-  width: 100%;
-  height: 100%;
-}
-
-.choose div h2 {
+.head1 {
   position: absolute;
-  padding: 23% 38%;
-  width: 100%;
-  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  text-align: center;
 }
 
-.tour:hover ,
-.trek:hover {
+.tour:hover {
   transform: translateY(-20px);
-  transition: transform 0.5s ease;
+  opacity: 0.7;
 }
 
-.tour:hover h2,
-.trek:hover h2 {
+.tour:hover h2 {
   transform: scale(1.3);
-  transition: transform 0.3s ease;
 }

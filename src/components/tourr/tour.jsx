@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Booking from "../booking";
 import tour from "./tour.jpg";
+import "./tourr.css";
 
 export default function Tour() {
   return (

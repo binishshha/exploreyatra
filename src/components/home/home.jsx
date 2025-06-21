@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 import Footer from "../Footer";
 import tour from "./tour.jpg";
-import trek from "./trek.jpg";
 import "./home.css";
 
 export default function Home() {
@@ -18,9 +17,8 @@ export default function Home() {
           height: "40vw",
           opacity: "0.7",
         }}
-      >
-      </div>
-      
+      ></div>
+
       <div className="homecontainer">
         <div
           className="ques"
@@ -30,7 +28,7 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          <h1>Where do you wanna go?</h1>
+          <h1>WELCOME TO EXPLOREयात्रा</h1>
         </div>
 
         <div
@@ -52,13 +50,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="choose">
-          <div
-            className="tour"
-            style={{
-              position: "relative",
-            }}
-          >
+ <div
+            className="tour" >
             <NavLink to="/tour">
               <div className="head1">
                 <h2>TOUR</h2>
@@ -68,34 +61,12 @@ export default function Home() {
                 alt="Tour"
                 style={{
                   opacity: "0.5",
-                  borderRadius:'20px'
-                }}
-              />
-            </NavLink>
-          </div>
-
-          <div
-            className="trek"
-            style={{
-              position: "relative",
-            }}
-          >
-            <NavLink to="/trek">
-              <div className="head2">
-                <h2>TREK</h2>
-              </div>
-              <img
-                src={trek}
-                alt="Trek"
-                style={{
-                  opacity: "0.5",
-                  borderRadius:'20px'
+                  borderRadius: "20px",
                 }}
               />
             </NavLink>
           </div>
         </div>
-      </div>
       <Footer />
     </>
   );

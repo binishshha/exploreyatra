@@ -23,9 +23,6 @@ function NavBar() {
               <Link to="/tour">TOUR</Link>
             </li>
             <li>
-              <Link to="/trek">TREK</Link>
-            </li>
-            <li>
               <Link to="/contactus">CONTACTUS</Link>
             </li>
             <li>

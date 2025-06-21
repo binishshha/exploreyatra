@@ -1,8 +1,12 @@
 import Accommodation from "./accommodation/hotels";
+import Activity from "./adventures/adventuree";
 import { useState } from "react";
 import { MdCardTravel } from "react-icons/md";
 import { FaRegPlusSquare, FaRegMinusSquare } from "react-icons/fa";
 import { CiSquareRemove } from "react-icons/ci";
+import Dropdown from "./transport/dropdown";
+import  RoadTransport  from "./transport/roadtransport";
+import  AirTransport  from "./transport/airtransport";
 
 export default function Calculation() {
   const [cart, setCart] = useState([]);
@@ -28,9 +32,7 @@ export default function Calculation() {
 
   const deductQuantity = (id) => {
     const updatedCart = cart
-      .map((item) =>
-        item.id === id ? { ...item, qty: item.qty - 1 } : item
-      )
+      .map((item) => (item.id === id ? { ...item, qty: item.qty - 1 } : item))
       .filter((item) => item.qty > 0);
     setCart(updatedCart);
   };
@@ -99,8 +101,8 @@ export default function Calculation() {
                       marginBottom: "8px",
                     }}
                   >
-                    <p style={{ flexGrow: 1, margin: 0 }}>
-                      {place.name} — Rs. {place.price} × {place.qty} = Rs.{" "}
+                    <p>
+                      {place.name} — ${place.price} × {place.qty} = ${" "}
                       {place.price * place.qty}
                     </p>
                     <FaRegPlusSquare
@@ -118,7 +120,7 @@ export default function Calculation() {
                   </div>
                 ))}
                 <hr />
-                <h3>Total: Rs. {calculateTotal()}</h3>
+                <h3>Total: ${calculateTotal()}</h3>
                 <button
                   onClick={clearCart}
                   style={{
@@ -139,7 +141,10 @@ export default function Calculation() {
         )}
       </div>
 
+       <Dropdown addToCart={addToCart} />
       <Accommodation addToCart={addToCart} />
+      <Activity addToCart={addToCart} />
+
     </>
   );
 }

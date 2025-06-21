@@ -5,7 +5,7 @@ import { BiTransferAlt } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import "./airtransport.css";
 
-export default function Date() {
+export default function AirTransport() {
   const [formState, setFormState] = useState(initialInputs);
   const place = useParams();
 

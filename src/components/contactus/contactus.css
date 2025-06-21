@@ -80,6 +80,9 @@ font-weight: bold;
 
 .butonn button:hover {
   background-color: #0056b3;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
 }
 
 

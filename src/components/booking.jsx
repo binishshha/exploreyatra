@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Accommodation from "./accommodation/hotels";
 import { useParams } from "react-router";
-import Transport from "./transport/transport";
 import Calculation from "./calculation";
 
 const Booking = () => {
@@ -23,7 +22,6 @@ const Booking = () => {
       >
         <h1>Customize your trip to {place.name}</h1>
       </div>
-      <Transport />
       <Calculation />
     </>
   );

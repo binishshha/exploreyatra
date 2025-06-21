@@ -19,6 +19,7 @@ const handleChange = (e) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data:", formState);
+    alert('Form Submitted Successfully!')
   };
 
   return (
@@ -89,7 +90,7 @@ const handleChange = (e) => {
           </div>
 
           <div className="butonn">
-            <button type="submit">Submit</button>
+            <button type="submit" onSubmit={handleSubmit}>Submit</button>
             <button type="inquire">Inquire* </button>
           </div>
         </div>

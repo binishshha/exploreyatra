@@ -30,7 +30,9 @@ export default function Accommodation({ addToCart }) {
             <p>{place.description}</p>
             <p className="p">
               ${place.price}/night
-              <button className="book-button" onClick={() => addToCart(place)}>
+              <button className="book-button" onClick={() => {addToCart(place)
+                alert (`${place.name} has been booked.`)
+              }}>
                 Book Now
               </button>
             </p>

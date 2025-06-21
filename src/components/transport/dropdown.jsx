@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RoadTransport from "./roadtransport.jsx";
 import AirTransport from "./airtransport.jsx";
 
-export default function Dropdown() {
+export default function Dropdown({addToCart}) {
   const [transportMode, setTransportMode] = useState("");
 
   const handleChange = (e) => {
@@ -32,8 +32,7 @@ export default function Dropdown() {
 </div>
 
 <div>
-      {transportMode === "Road" && <RoadTransport />}
-
+      {transportMode === "Road" && <RoadTransport addToCart={addToCart} />}
       {transportMode === "Air" && <AirTransport />}
 
     </div>

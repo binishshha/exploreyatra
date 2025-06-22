@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import "./navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 
 function NavBar() {
@@ -14,7 +15,7 @@ function NavBar() {
     <>
       <nav className="main">
         <div className="logo">EXPLOREयात्रा</div>
-        <div className={hammenu? "navbar show":"navbar"}>
+        <div className={hammenu ? "navbar show" : "navbar"}>
           <ul>
             <li>
               <Link to="/">HOME</Link>
@@ -29,6 +30,7 @@ function NavBar() {
               <Link to="/aboutus">ABOUTUS</Link>
             </li>
           </ul>
+         
           <div className="hamburger" onClick={toggle}>
             <GiHamburgerMenu />
           </div>

@@ -50,23 +50,24 @@ export default function Home() {
           </p>
         </div>
 
- <div
-            className="tour" >
-            <NavLink to="/tour">
-              <div className="head1">
-                <h2>TOUR</h2>
-              </div>
-              <img
-                src={tour}
-                alt="Tour"
-                style={{
-                  opacity: "0.5",
-                  borderRadius: "20px",
-                }}
-              />
-            </NavLink>
-          </div>
+        <div className="tour">
+          <NavLink to="/tour">
+            <div className="head1">
+              <h2>TOUR</h2>
+            </div>
+            <img
+              src={tour}
+              alt="Tour"
+              style={{
+                opacity: "0.5",
+                borderRadius: "20px",
+                margin:'10px',
+                width:'95%'
+              }}
+            />
+          </NavLink>
         </div>
+      </div>
       <Footer />
     </>
   );

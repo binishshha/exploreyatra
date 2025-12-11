@@ -5,8 +5,8 @@ import { MdCardTravel } from "react-icons/md";
 import { FaRegPlusSquare, FaRegMinusSquare } from "react-icons/fa";
 import { CiSquareRemove } from "react-icons/ci";
 import Dropdown from "./transport/dropdown";
-import  RoadTransport  from "./transport/roadtransport";
-import  AirTransport  from "./transport/airtransport";
+import RoadTransport from "./transport/roadtransport";
+import AirTransport from "./transport/airtransport";
 
 export default function Calculation() {
   const [cart, setCart] = useState([]);
@@ -58,6 +58,7 @@ export default function Calculation() {
           zIndex: "99",
           top: "20px",
           right: "20px",
+         
         }}
       >
         <button
@@ -83,7 +84,8 @@ export default function Calculation() {
               borderRadius: "10px",
               padding: "15px",
               boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-              maxWidth: "400px",
+              minWidth: "300px",
+              width: "30vw",
             }}
           >
             <h2>Cart</h2>
@@ -141,10 +143,9 @@ export default function Calculation() {
         )}
       </div>
 
-       <Dropdown addToCart={addToCart} />
+      <Dropdown addToCart={addToCart} />
       <Accommodation addToCart={addToCart} />
       <Activity addToCart={addToCart} />
-
     </>
   );
 }
